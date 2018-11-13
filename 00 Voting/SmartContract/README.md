@@ -1,5 +1,4 @@
 # ganache-cli
-* Run ganache-cli
 ```
 $ node_modules/.bin/ganache-cli
 ```
@@ -49,8 +48,10 @@ Listening on 127.0.0.1:8545
 ```
 
 
-
-# Execute Node
+# Node.js
+```
+$ node
+```
 
 * Reading Voting SmartContract from File System 
 ```
