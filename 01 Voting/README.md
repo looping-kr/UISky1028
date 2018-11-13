@@ -1,14 +1,25 @@
 
-* insatll ganache on Linux 
+* Truffle Setup
 ```
-$ sudo apt-get update
-$ curl -sL https://deb.nodesource.com/setup_7.x -o nodesource_setup.sh
-$ sudo bash nodesource_setup.sh
-$ sudo apt-get install nodejs
-$ node --version
-v7.4.0
-$ npm --version
-4.0.5
-$ npm install ganache-cli web3@0.20.1 solc
-$ node_modules/.bin/ganache-cli
+$ npm install -g truffle
+```
+
+```
+$ mkdir -p Voting
+$ cd Voting2
+$ truffle unbox webpack
+$ ls
+LICENSE  box-img-lg.png  build      migrations    package.json  truffle.js
+app      box-img-sm.png  contracts  node_modules  test          webpack.config.js
+
+$ ls app/
+index.html javascripts stylesheets
+
+$ ls contracts/
+ConvertLib.sol MetaCoin.sol Migrations.sol
+
+$ ls migrations/
+1_initial_migration.js 2_deploy_contracts.js
+
+$ rm contracts/ConvertLib.sol contracts/MetaCoin.sol
 ```
