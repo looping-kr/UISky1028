@@ -1,20 +1,19 @@
 # Execute Node
 
-* 
+* Reading Voting SmartContract from File System 
 ```
 code = fs.readFileSync('Voting.sol').toString()
 ```
 
-* 
+* Getting Solidity Complier
 ```
 solc = require('solc')
 ```
 
-* 
+* compile code
 ```
 compiledCode = solc.compile(code)
 ```
-
 
 
 * 
