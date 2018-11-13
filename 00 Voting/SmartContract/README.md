@@ -63,6 +63,8 @@ $ node
 > solc = require('solc')
 ```
 
+'pragma solidity ^0.4.23;\n\ncontract Voting {\n\t// Constructor to initialize candidates\n\t// vote for candidates\n\t// get count of votes for each candidates\n\n\tbytes32[] public candidateList;\n\tmapping (bytes32 => uint8) votesReceived;\n\t\n\tconstructor(bytes32[] candidateNames) {\n\t\tcandidateList = candidateNames;\n\t}\n\n\tfunction voteForCandidate(bytes32 candidate) public {\n\t\trequire(validCandidate(candidate));\n\t\tvotesReceived[candidate] += 1;\t\n\t}\n\n\tfunction totalVotesFor(bytes32 candidate) public returns(uint8) {\n\t\trequire(validCandidate(candidate));\n\t\treturn votesReceived[candidate];\t\n\t}\n\n\tfunction validCandidate(bytes32 candidate) view public returns(bool) {\n\t\tfor (uint i = 0; i < candidateList.length; i++) {\n\t\t\tif (candidateList[i] == candidate) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n}\n'
+
 * compile code
 ```
 > compiledCode = solc.compile(code)
