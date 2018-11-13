@@ -1,62 +1,14 @@
-# Execute Node
 
-* Reading Voting SmartContract from File System 
+* insatll ganache on Linux 
 ```
-code = fs.readFileSync('Voting.sol').toString()
-```
-
-* Getting Solidity Complier
-```
-solc = require('solc')
-```
-
-* compile code
-```
-compiledCode = solc.compile(code)
-```
-
-
-* 
-```
-Web3 = require('web3')
-```
-* 
-```
-web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-```
-* 
-```
-abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface)
-```
-* 
-```
-VotingContract = web3.eth.contract(abiDefinition)
-```
-* 
-```
-byteCode = compiledCode.contracts[':Voting'].bytecode
-```
-* 
-```
-deployedContract = VotingContract.new(['Rama','Nick','Jose'],{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
-```
-* 
-```
-deployedContract.address
-```
-* 
-```
-deployedContract.totalVotesFor.call('Rama')
-```
-* 
-```
-deployedContract.voteForCandidate('Rama', {from: web3.eth.accounts[0]})
-```
-* 
-```
-deployedContract.voteForCandidate('Rama', {from: web3.eth.accounts[0]})
-```
-* 
-```
-deployedContract.totalVotesFor.call('Rama').toLocaleString()
+$ sudo apt-get update
+$ curl -sL https://deb.nodesource.com/setup_7.x -o nodesource_setup.sh
+$ sudo bash nodesource_setup.sh
+$ sudo apt-get install nodejs
+$ node --version
+v7.4.0
+$ npm --version
+4.0.5
+$ npm install ganache-cli web3@0.20.1 solc
+$ node_modules/.bin/ganache-cli
 ```
