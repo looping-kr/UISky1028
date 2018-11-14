@@ -450,5 +450,5 @@ TruffleContract {
   transactionHash: null }
 ```
 ```  
-Voting.deployed().then(function(f) {f.totalVotesFor.call('Nick').then(function(f) {console.log(f)})})
+truffle(ganache) Voting.deployed().then(function(f) {f.totalVotesFor.call('Nick').then(function(f) {console.log(f)})})
 ```
