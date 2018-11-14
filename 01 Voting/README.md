@@ -39,3 +39,87 @@ $ ls migrations/
 
 $ rm contracts/ConvertLib.sol contracts/MetaCoin.sol
 ```
+* Truffle Compile & Deploy
+```
+$ truffle compile
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/Voting.sol...
+
+Compilation warnings encountered:
+
+/home/looping/ethereum_voting_dapp/chapter2/contracts/Migrations.sol:11:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Migrations() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+Writing artifacts to ./build/contracts
+
+$ ls -R ./build
+./build:
+contracts
+
+./build/contracts:
+Migrations.json  Voting.json
+```
+```
+$ cat cat ./build/contracts/Migrations.json
+{
+  "contractName": "Migrations",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "last_completed_migration",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ], 
+--More--
+```
+```
+{
+  "contractName": "Voting",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "candidateList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "candidateNames",
+          "type": "bytes32[]"
+        }
+      ],
+--More--
+```
