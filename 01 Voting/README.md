@@ -61,7 +61,7 @@ contracts
 Migrations.json  Voting.json
 ```
 ```
-$ cat cat ./build/contracts/Migrations.json
+$ cat cat ./build/contracts/Migrations.json | more
 {
   "contractName": "Migrations",
   "abi": [
@@ -92,6 +92,7 @@ $ cat cat ./build/contracts/Migrations.json
 --More--
 ```
 ```
+cat ./build/contracts/Voting.json | more
 {
   "contractName": "Voting",
   "abi": [
