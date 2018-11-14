@@ -124,3 +124,77 @@ cat ./build/contracts/Voting.json | more
       ],
 --More--
 ```
+```
+$ truffle migrate --network ganache
+Using network 'ganache'.
+
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  ... 0x5cde955bbc462cfd51c112332793edbd707ca7f27b15557d11cce93b48d5aa67
+  Migrations: 0xa7b2efd0651ededa0c83a7e49c796fc157feab3a
+Saving successful migration to network...
+  ... 0xbb947d73d16dec9478c9d2335c7b58a8f9503469783e0bcfe46c130bd52f0fc7
+Saving artifacts...
+Running migration: 2_deploy_contracts.js
+  Deploying Voting...
+  ... 0x2149c3969476eee04fd262e5e9b0cd74efa9f6ba1ea99d5a7e44c98754156a49
+  Voting: 0xdbe992f002da245c633e622066deb3f2ff7eb1f2
+Saving successful migration to network...
+  ... 0xe61709e7b7a3093f255b8fdc97dba7c4ff7080a4bf097b14438538423cfa1470
+Saving artifacts...
+```
+
+```
+>>>>> ganache console
+
+net_version
+eth_accounts
+eth_accounts
+net_version
+net_version
+eth_sendTransaction
+
+  Transaction: 0x5cde955bbc462cfd51c112332793edbd707ca7f27b15557d11cce93b48d5aa67
+  Contract created: 0xa7b2efd0651ededa0c83a7e49c796fc157feab3a
+  Gas usage: 277462
+  Block Number: 1
+  Block Time: Wed Nov 14 2018 20:27:36 GMT+0900 (DST)
+
+eth_newBlockFilter
+eth_getFilterChanges
+eth_getTransactionReceipt
+eth_getCode
+eth_uninstallFilter
+eth_sendTransaction
+
+  Transaction: 0xbb947d73d16dec9478c9d2335c7b58a8f9503469783e0bcfe46c130bd52f0fc7
+  Gas usage: 42008
+  Block Number: 2
+  Block Time: Wed Nov 14 2018 20:27:36 GMT+0900 (DST)
+
+eth_getTransactionReceipt
+eth_accounts
+net_version
+net_version
+eth_sendTransaction
+
+  Transaction: 0x2149c3969476eee04fd262e5e9b0cd74efa9f6ba1ea99d5a7e44c98754156a49
+  Contract created: 0xdbe992f002da245c633e622066deb3f2ff7eb1f2
+  Gas usage: 333958
+  Block Number: 3
+  Block Time: Wed Nov 14 2018 20:27:36 GMT+0900 (DST)
+
+eth_newBlockFilter
+eth_getFilterChanges
+eth_getTransactionReceipt
+eth_getCode
+eth_uninstallFilter
+eth_sendTransaction
+
+  Transaction: 0xe61709e7b7a3093f255b8fdc97dba7c4ff7080a4bf097b14438538423cfa1470
+  Gas usage: 27008
+  Block Number: 4
+  Block Time: Wed Nov 14 2018 20:27:37 GMT+0900 (DST)
+
+eth_getTransactionReceipt
+```
