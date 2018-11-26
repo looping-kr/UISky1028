@@ -63,7 +63,6 @@ $ node
 * Getting Solidity Complier
 ```
 > solc = require('solc')
-```
 { version: [Function],
   semver: [Function: versionToSemver],
   license: [Function],
@@ -76,7 +75,7 @@ $ node
   supportsStandard: true,
   loadRemoteVersion: [Function: loadRemoteVersion],
   setupMethods: [Function: setupMethods] }
- 
+```
 
 * compile code
 ```
