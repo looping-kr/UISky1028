@@ -102,34 +102,480 @@ $ node
 * 
 ```
 > Web3 = require('web3')
+{ [Function: Web3]
+  providers:
+   { HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] } }
 ```
 * 
 ```
 > web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+Web3 {
+  _requestManager:
+   RequestManager {
+     provider:
+      HttpProvider {
+        host: 'http://localhost:8545',
+        timeout: 0,
+        user: undefined,
+        password: undefined },
+     polls: {},
+     timeout: null },
+  currentProvider:
+   HttpProvider {
+     host: 'http://localhost:8545',
+     timeout: 0,
+     user: undefined,
+     password: undefined },
+  eth:
+   Eth {
+     _requestManager: RequestManager { provider: [Object], polls: {}, timeout: null },
+     getBalance: { [Function: send] request: [Function: bound ], call: 'eth_getBalance' },
+     getStorageAt: { [Function: send] request: [Function: bound ], call: 'eth_getStorageAt' },
+     getCode: { [Function: send] request: [Function: bound ], call: 'eth_getCode' },
+     getBlock: { [Function: send] request: [Function: bound ], call: [Function: blockCall] },
+     getUncle: { [Function: send] request: [Function: bound ], call: [Function: uncleCall] },
+     getCompilers: { [Function: send] request: [Function: bound ], call: 'eth_getCompilers' },
+     getBlockTransactionCount:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: getBlockTransactionCountCall] },
+     getBlockUncleCount:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: uncleCountCall] },
+     getTransaction:
+      { [Function: send]
+        request: [Function: bound ],
+        call: 'eth_getTransactionByHash' },
+     getTransactionFromBlock:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: transactionFromBlockCall] },
+     getTransactionReceipt:
+      { [Function: send]
+        request: [Function: bound ],
+        call: 'eth_getTransactionReceipt' },
+     getTransactionCount: { [Function: send] request: [Function: bound ], call: 'eth_getTransactionCount' },
+     call: { [Function: send] request: [Function: bound ], call: 'eth_call' },
+     estimateGas: { [Function: send] request: [Function: bound ], call: 'eth_estimateGas' },
+     sendRawTransaction: { [Function: send] request: [Function: bound ], call: 'eth_sendRawTransaction' },
+     signTransaction: { [Function: send] request: [Function: bound ], call: 'eth_signTransaction' },
+     sendTransaction: { [Function: send] request: [Function: bound ], call: 'eth_sendTransaction' },
+     sign: { [Function: send] request: [Function: bound ], call: 'eth_sign' },
+     compile: { solidity: [Object], lll: [Object], serpent: [Object] },
+     submitWork: { [Function: send] request: [Function: bound ], call: 'eth_submitWork' },
+     getWork: { [Function: send] request: [Function: bound ], call: 'eth_getWork' },
+     coinbase: [Getter],
+     getCoinbase: { [Function: get] request: [Function: bound ] },
+     mining: [Getter],
+     getMining: { [Function: get] request: [Function: bound ] },
+     hashrate: [Getter],
+     getHashrate: { [Function: get] request: [Function: bound ] },
+     syncing: [Getter],
+     getSyncing: { [Function: get] request: [Function: bound ] },
+     gasPrice: [Getter],
+     getGasPrice: { [Function: get] request: [Function: bound ] },
+     accounts: [Getter],
+     getAccounts: { [Function: get] request: [Function: bound ] },
+     blockNumber: [Getter],
+     getBlockNumber: { [Function: get] request: [Function: bound ] },
+     protocolVersion: [Getter],
+     getProtocolVersion: { [Function: get] request: [Function: bound ] },
+     iban:
+      { [Function: Iban]
+        fromAddress: [Function],
+        fromBban: [Function],
+        createIndirect: [Function],
+        isValid: [Function] },
+     sendIBANTransaction: [Function: bound transfer] },
+  db:
+   DB {
+     _requestManager: RequestManager { provider: [Object], polls: {}, timeout: null },
+     putString: { [Function: send] request: [Function: bound ], call: 'db_putString' },
+     getString: { [Function: send] request: [Function: bound ], call: 'db_getString' },
+     putHex: { [Function: send] request: [Function: bound ], call: 'db_putHex' },
+     getHex: { [Function: send] request: [Function: bound ], call: 'db_getHex' } },
+  shh:
+   Shh {
+     _requestManager: RequestManager { provider: [Object], polls: {}, timeout: null },
+     version: { [Function: send] request: [Function: bound ], call: 'shh_version' },
+     info: { [Function: send] request: [Function: bound ], call: 'shh_info' },
+     setMaxMessageSize: { [Function: send] request: [Function: bound ], call: 'shh_setMaxMessageSize' },
+     setMinPoW: { [Function: send] request: [Function: bound ], call: 'shh_setMinPoW' },
+     markTrustedPeer: { [Function: send] request: [Function: bound ], call: 'shh_markTrustedPeer' },
+     newKeyPair: { [Function: send] request: [Function: bound ], call: 'shh_newKeyPair' },
+     addPrivateKey: { [Function: send] request: [Function: bound ], call: 'shh_addPrivateKey' },
+     deleteKeyPair: { [Function: send] request: [Function: bound ], call: 'shh_deleteKeyPair' },
+     hasKeyPair: { [Function: send] request: [Function: bound ], call: 'shh_hasKeyPair' },
+     getPublicKey: { [Function: send] request: [Function: bound ], call: 'shh_getPublicKey' },
+     getPrivateKey: { [Function: send] request: [Function: bound ], call: 'shh_getPrivateKey' },
+     newSymKey: { [Function: send] request: [Function: bound ], call: 'shh_newSymKey' },
+     addSymKey: { [Function: send] request: [Function: bound ], call: 'shh_addSymKey' },
+     generateSymKeyFromPassword:
+      { [Function: send]
+        request: [Function: bound ],
+        call: 'shh_generateSymKeyFromPassword' },
+     hasSymKey: { [Function: send] request: [Function: bound ], call: 'shh_hasSymKey' },
+     getSymKey: { [Function: send] request: [Function: bound ], call: 'shh_getSymKey' },
+     deleteSymKey: { [Function: send] request: [Function: bound ], call: 'shh_deleteSymKey' },
+     post: { [Function: send] request: [Function: bound ], call: 'shh_post' } },
+  net:
+   Net {
+     _requestManager: RequestManager { provider: [Object], polls: {}, timeout: null },
+     listening: [Getter],
+     getListening: { [Function: get] request: [Function: bound ] },
+     peerCount: [Getter],
+     getPeerCount: { [Function: get] request: [Function: bound ] } },
+  personal:
+   Personal {
+     _requestManager: RequestManager { provider: [Object], polls: {}, timeout: null },
+     newAccount: { [Function: send] request: [Function: bound ], call: 'personal_newAccount' },
+     importRawKey: { [Function: send] request: [Function: bound ], call: 'personal_importRawKey' },
+     unlockAccount: { [Function: send] request: [Function: bound ], call: 'personal_unlockAccount' },
+     ecRecover: { [Function: send] request: [Function: bound ], call: 'personal_ecRecover' },
+     sign: { [Function: send] request: [Function: bound ], call: 'personal_sign' },
+     sendTransaction:
+      { [Function: send]
+        request: [Function: bound ],
+        call: 'personal_sendTransaction' },
+     lockAccount: { [Function: send] request: [Function: bound ], call: 'personal_lockAccount' },
+     listAccounts: [Getter],
+     getListAccounts: { [Function: get] request: [Function: bound ] } },
+  bzz:
+   Swarm {
+     _requestManager: RequestManager { provider: [Object], polls: {}, timeout: null },
+     blockNetworkRead: { [Function: send] request: [Function: bound ], call: 'bzz_blockNetworkRead' },
+     syncEnabled: { [Function: send] request: [Function: bound ], call: 'bzz_syncEnabled' },
+     swapEnabled: { [Function: send] request: [Function: bound ], call: 'bzz_swapEnabled' },
+     download: { [Function: send] request: [Function: bound ], call: 'bzz_download' },
+     upload: { [Function: send] request: [Function: bound ], call: 'bzz_upload' },
+     retrieve: { [Function: send] request: [Function: bound ], call: 'bzz_retrieve' },
+     store: { [Function: send] request: [Function: bound ], call: 'bzz_store' },
+     get: { [Function: send] request: [Function: bound ], call: 'bzz_get' },
+     put: { [Function: send] request: [Function: bound ], call: 'bzz_put' },
+     modify: { [Function: send] request: [Function: bound ], call: 'bzz_modify' },
+     hive: [Getter],
+     getHive: { [Function: get] request: [Function: bound ] },
+     info: [Getter],
+     getInfo: { [Function: get] request: [Function: bound ] } },
+  settings: Settings { defaultBlock: 'latest', defaultAccount: undefined },
+  version:
+   { api: '0.20.1',
+     node: [Getter],
+     getNode: { [Function: get] request: [Function: bound ] },
+     network: [Getter],
+     getNetwork: { [Function: get] request: [Function: bound ] },
+     ethereum: [Getter],
+     getEthereum: { [Function: get] request: [Function: bound ] },
+     whisper: [Getter],
+     getWhisper: { [Function: get] request: [Function: bound ] } },
+  providers:
+   { HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] },
+  _extend:
+   { [Function: ex]
+     formatters:
+      { inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter],
+        inputBlockNumberFormatter: [Function: inputBlockNumberFormatter],
+        inputCallFormatter: [Function: inputCallFormatter],
+        inputTransactionFormatter: [Function: inputTransactionFormatter],
+        inputAddressFormatter: [Function: inputAddressFormatter],
+        inputPostFormatter: [Function: inputPostFormatter],
+        outputBigNumberFormatter: [Function: outputBigNumberFormatter],
+        outputTransactionFormatter: [Function: outputTransactionFormatter],
+        outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter],
+        outputBlockFormatter: [Function: outputBlockFormatter],
+        outputLogFormatter: [Function: outputLogFormatter],
+        outputPostFormatter: [Function: outputPostFormatter],
+        outputSyncingFormatter: [Function: outputSyncingFormatter] },
+     utils:
+      { padLeft: [Function: padLeft],
+        padRight: [Function: padRight],
+        toHex: [Function: toHex],
+        toDecimal: [Function: toDecimal],
+        fromDecimal: [Function: fromDecimal],
+        toUtf8: [Function: toUtf8],
+        toAscii: [Function: toAscii],
+        fromUtf8: [Function: fromUtf8],
+        fromAscii: [Function: fromAscii],
+        transformToFullName: [Function: transformToFullName],
+        extractDisplayName: [Function: extractDisplayName],
+        extractTypeName: [Function: extractTypeName],
+        toWei: [Function: toWei],
+        fromWei: [Function: fromWei],
+        toBigNumber: [Function: toBigNumber],
+        toTwosComplement: [Function: toTwosComplement],
+        toAddress: [Function: toAddress],
+        isBigNumber: [Function: isBigNumber],
+        isStrictAddress: [Function: isStrictAddress],
+        isAddress: [Function: isAddress],
+        isChecksumAddress: [Function: isChecksumAddress],
+        toChecksumAddress: [Function: toChecksumAddress],
+        isFunction: [Function: isFunction],
+        isString: [Function: isString],
+        isObject: [Function: isObject],
+        isBoolean: [Function: isBoolean],
+        isArray: [Function: isArray],
+        isJson: [Function: isJson],
+        isBloom: [Function: isBloom],
+        isTopic: [Function: isTopic] },
+     Method: [Function: Method],
+     Property: [Function: Property] } }
 ```
 * 
 ```
 > abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface)
+[ { constant: false,
+    inputs: [ [Object] ],
+    name: 'totalVotesFor',
+    outputs: [ [Object] ],
+    payable: false,
+    stateMutability: 'nonpayable',
+    type: 'function' },
+  { constant: true,
+    inputs: [ [Object] ],
+    name: 'validCandidate',
+    outputs: [ [Object] ],
+    payable: false,
+    stateMutability: 'view',
+    type: 'function' },
+  { constant: true,
+    inputs: [ [Object] ],
+    name: 'candidateList',
+    outputs: [ [Object] ],
+    payable: false,
+    stateMutability: 'view',
+    type: 'function' },
+  { constant: false,
+    inputs: [ [Object] ],
+    name: 'voteForCandidate',
+    outputs: [],
+    payable: false,
+    stateMutability: 'nonpayable',
+    type: 'function' },
+  { inputs: [ [Object] ],
+    payable: false,
+    stateMutability: 'nonpayable',
+    type: 'constructor' } ]
 ```
 * 
 ```
 > VotingContract = web3.eth.contract(abiDefinition)
+ContractFactory {
+  eth:
+   Eth {
+     _requestManager: RequestManager { provider: [Object], polls: {}, timeout: null },
+     getBalance: { [Function: send] request: [Function: bound ], call: 'eth_getBalance' },
+     getStorageAt: { [Function: send] request: [Function: bound ], call: 'eth_getStorageAt' },
+     getCode: { [Function: send] request: [Function: bound ], call: 'eth_getCode' },
+     getBlock: { [Function: send] request: [Function: bound ], call: [Function: blockCall] },
+     getUncle: { [Function: send] request: [Function: bound ], call: [Function: uncleCall] },
+     getCompilers: { [Function: send] request: [Function: bound ], call: 'eth_getCompilers' },
+     getBlockTransactionCount:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: getBlockTransactionCountCall] },
+     getBlockUncleCount:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: uncleCountCall] },
+     getTransaction:
+      { [Function: send]
+        request: [Function: bound ],
+        call: 'eth_getTransactionByHash' },
+     getTransactionFromBlock:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: transactionFromBlockCall] },
+     getTransactionReceipt:
+      { [Function: send]
+        request: [Function: bound ],
+        call: 'eth_getTransactionReceipt' },
+     getTransactionCount: { [Function: send] request: [Function: bound ], call: 'eth_getTransactionCount' },
+     call: { [Function: send] request: [Function: bound ], call: 'eth_call' },
+     estimateGas: { [Function: send] request: [Function: bound ], call: 'eth_estimateGas' },
+     sendRawTransaction: { [Function: send] request: [Function: bound ], call: 'eth_sendRawTransaction' },
+     signTransaction: { [Function: send] request: [Function: bound ], call: 'eth_signTransaction' },
+     sendTransaction: { [Function: send] request: [Function: bound ], call: 'eth_sendTransaction' },
+     sign: { [Function: send] request: [Function: bound ], call: 'eth_sign' },
+     compile: { solidity: [Object], lll: [Object], serpent: [Object] },
+     submitWork: { [Function: send] request: [Function: bound ], call: 'eth_submitWork' },
+     getWork: { [Function: send] request: [Function: bound ], call: 'eth_getWork' },
+     coinbase: [Getter],
+     getCoinbase: { [Function: get] request: [Function: bound ] },
+     mining: [Getter],
+     getMining: { [Function: get] request: [Function: bound ] },
+     hashrate: [Getter],
+     getHashrate: { [Function: get] request: [Function: bound ] },
+     syncing: [Getter],
+     getSyncing: { [Function: get] request: [Function: bound ] },
+     gasPrice: [Getter],
+     getGasPrice: { [Function: get] request: [Function: bound ] },
+     accounts: [Getter],
+     getAccounts: { [Function: get] request: [Function: bound ] },
+     blockNumber: [Getter],
+     getBlockNumber: { [Function: get] request: [Function: bound ] },
+     protocolVersion: [Getter],
+     getProtocolVersion: { [Function: get] request: [Function: bound ] },
+     iban:
+      { [Function: Iban]
+        fromAddress: [Function],
+        fromBban: [Function],
+        createIndirect: [Function],
+        isValid: [Function] },
+     sendIBANTransaction: [Function: bound transfer] },
+  abi:
+   [ { constant: false,
+       inputs: [Array],
+       name: 'totalVotesFor',
+       outputs: [Array],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'function' },
+     { constant: true,
+       inputs: [Array],
+       name: 'validCandidate',
+       outputs: [Array],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function' },
+     { constant: true,
+       inputs: [Array],
+       name: 'candidateList',
+       outputs: [Array],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function' },
+     { constant: false,
+       inputs: [Array],
+       name: 'voteForCandidate',
+       outputs: [],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'function' },
+     { inputs: [Array],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'constructor' } ],
+  new: { [Function] getData: [Function: bound ] } }
 ```
 * 
 ```
 > byteCode = compiledCode.contracts[':Voting'].bytecode
+'608060405234801561001057600080fd5b5060405161039d38038061039d833981018060405281019080805182019291905050508060009080519060200190610049929190610050565b50506100c8565b828054828255906000526020600020908101928215610092579160200282015b82811115610091578251829060001916905591602001919060010190610070565b5b50905061009f91906100a3565b5090565b6100c591905b808211156100c15760008160009055506001016100a9565b5090565b90565b6102c6806100d76000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f265cf714610067578063392e6678146100b2578063b13c744b146100fb578063cc9ab26714610144575b600080fd5b34801561007357600080fd5b506100966004803603810190808035600019169060200190929190505050610175565b604051808260ff1660ff16815260200191505060405180910390f35b3480156100be57600080fd5b506100e160048036038101908080356000191690602001909291905050506101bb565b604051808215151515815260200191505060405180910390f35b34801561010757600080fd5b506101266004803603810190808035906020019092919050505061021a565b60405180826000191660001916815260200191505060405180910390f35b34801561015057600080fd5b50610173600480360381019080803560001916906020019092919050505061023d565b005b6000610180826101bb565b151561018b57600080fd5b60016000836000191660001916815260200190815260200160002060009054906101000a900460ff169050919050565b600080600090505b60008054905081101561020f5782600019166000828154811015156101e457fe5b90600052602060002001546000191614156102025760019150610214565b80806001019150506101c3565b600091505b50919050565b60008181548110151561022957fe5b906000526020600020016000915090505481565b610246816101bb565b151561025157600080fd5b6001806000836000191660001916815260200190815260200160002060008282829054906101000a900460ff160192506101000a81548160ff021916908360ff160217905550505600a165627a7a72305820b3de8ad44785e7a5b1fe69c74aef7ec267948d3adf5b865c025dc80ca73431d20029'
 ```
 * 
 ```
 > deployedContract = VotingContract.new(['Rama','Nick','Jose'],{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
+Contract {
+  _eth:
+   Eth {
+     _requestManager: RequestManager { provider: [Object], polls: {}, timeout: null },
+     getBalance: { [Function: send] request: [Function: bound ], call: 'eth_getBalance' },
+     getStorageAt: { [Function: send] request: [Function: bound ], call: 'eth_getStorageAt' },
+     getCode: { [Function: send] request: [Function: bound ], call: 'eth_getCode' },
+     getBlock: { [Function: send] request: [Function: bound ], call: [Function: blockCall] },
+     getUncle: { [Function: send] request: [Function: bound ], call: [Function: uncleCall] },
+     getCompilers: { [Function: send] request: [Function: bound ], call: 'eth_getCompilers' },
+     getBlockTransactionCount:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: getBlockTransactionCountCall] },
+     getBlockUncleCount:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: uncleCountCall] },
+     getTransaction:
+      { [Function: send]
+        request: [Function: bound ],
+        call: 'eth_getTransactionByHash' },
+     getTransactionFromBlock:
+      { [Function: send]
+        request: [Function: bound ],
+        call: [Function: transactionFromBlockCall] },
+     getTransactionReceipt:
+      { [Function: send]
+        request: [Function: bound ],
+        call: 'eth_getTransactionReceipt' },
+     getTransactionCount: { [Function: send] request: [Function: bound ], call: 'eth_getTransactionCount' },
+     call: { [Function: send] request: [Function: bound ], call: 'eth_call' },
+     estimateGas: { [Function: send] request: [Function: bound ], call: 'eth_estimateGas' },
+     sendRawTransaction: { [Function: send] request: [Function: bound ], call: 'eth_sendRawTransaction' },
+     signTransaction: { [Function: send] request: [Function: bound ], call: 'eth_signTransaction' },
+     sendTransaction: { [Function: send] request: [Function: bound ], call: 'eth_sendTransaction' },
+     sign: { [Function: send] request: [Function: bound ], call: 'eth_sign' },
+     compile: { solidity: [Object], lll: [Object], serpent: [Object] },
+     submitWork: { [Function: send] request: [Function: bound ], call: 'eth_submitWork' },
+     getWork: { [Function: send] request: [Function: bound ], call: 'eth_getWork' },
+     coinbase: [Getter],
+     getCoinbase: { [Function: get] request: [Function: bound ] },
+     mining: [Getter],
+     getMining: { [Function: get] request: [Function: bound ] },
+     hashrate: [Getter],
+     getHashrate: { [Function: get] request: [Function: bound ] },
+     syncing: [Getter],
+     getSyncing: { [Function: get] request: [Function: bound ] },
+     gasPrice: [Getter],
+     getGasPrice: { [Function: get] request: [Function: bound ] },
+     accounts: [Getter],
+     getAccounts: { [Function: get] request: [Function: bound ] },
+     blockNumber: [Getter],
+     getBlockNumber: { [Function: get] request: [Function: bound ] },
+     protocolVersion: [Getter],
+     getProtocolVersion: { [Function: get] request: [Function: bound ] },
+     iban:
+      { [Function: Iban]
+        fromAddress: [Function],
+        fromBban: [Function],
+        createIndirect: [Function],
+        isValid: [Function] },
+     sendIBANTransaction: [Function: bound transfer] },
+  transactionHash: '0x8cb62c77a5479894d17e5928b21dacbfeabfb6555328af6bf14917c8c18cfe82',
+  address: undefined,
+  abi:
+   [ { constant: false,
+       inputs: [Array],
+       name: 'totalVotesFor',
+       outputs: [Array],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'function' },
+     { constant: true,
+       inputs: [Array],
+       name: 'validCandidate',
+       outputs: [Array],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function' },
+     { constant: true,
+       inputs: [Array],
+       name: 'candidateList',
+       outputs: [Array],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function' },
+     { constant: false,
+       inputs: [Array],
+       name: 'voteForCandidate',
+       outputs: [],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'function' },
+     { inputs: [Array],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'constructor' } ] }
 ```
 * 
 ```
 > deployedContract.address
+'0x018c7aed23a6e89f0528a7d0bf9f77c12377a939'
 ```
 * 
 ```
 > deployedContract.totalVotesFor.call('Rama')
+BigNumber { s: 1, e: 0, c: [ 0 ] }
 ```
 * 
 ```
