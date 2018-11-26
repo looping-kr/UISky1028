@@ -64,7 +64,18 @@ $ node
 ```
 > solc = require('solc')
 ```
-...
+{ version: [Function],
+  semver: [Function: versionToSemver],
+  license: [Function],
+  compile: [Function: compile],
+  compileStandard: [Function: compileStandard],
+  compileStandardWrapper: [Function: compileStandardWrapper],
+  linkBytecode: [Function: linkBytecode],
+  supportsMulti: true,
+  supportsImportCallback: true,
+  supportsStandard: true,
+  loadRemoteVersion: [Function: loadRemoteVersion],
+  setupMethods: [Function: setupMethods] }
 
 
 * compile code
