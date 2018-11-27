@@ -40,12 +40,12 @@ $ sudo make install
 ```
 
 # run bitcoind
+```
 $ bitcoind -regtest -daemon -deprecatedrpc=generate
-
-
-
+```
 
 # create block
+```
 $ bitcoin-cli -regtest generate 101
   "0edd6e01f910f480c8a2854a727badbabb21e2ae728264350e16844234e8e28a",
   "29d13049fc07b76d27225bafdfe9ec23cefe0536eec684d3b34dc8a8992480d9",
@@ -54,6 +54,7 @@ $ bitcoin-cli -regtest generate 101
   "40e5314f99cf059362947ab2e44bd7b79e2668e123b502fd8dcab92599317bb6",
   "5ad6efa41bd203715d8ef30ff0d81aa9cd53cc902c92970a3590b3741db70500",
 …..
+```
 
 
 
