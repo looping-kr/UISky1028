@@ -58,35 +58,47 @@ $ bitcoin-cli -regtest generate 101
 
 
 # verify block count 
+```
 $ bitcoin-cli -regtest getblockcount
 101
-
+```
 # create account 
+```
 $ bitcoin-cli -regtest getnewaddress testuser1
 2N3JsLY8XiEngBPXZ39FCvKguDzEigXB1mV
-
+```
 
 # display balance
+```
 $ bitcoin-cli -regtest getbalance
 50.00000000
+```
 
 # display balance of user
+```
 $ bitcoin-cli -regtest testuser1
-
+```
 # send money
+```
 $ bitcoin-cli -regtest sendtoaddress 2N3JsLY8XiEngBPXZ39FCvKguDzEigXB1mV  10
 a1533d9490f332befb8f30aae8e0f9a29e0591350afacb80ee17f3cfdec6a43b
+```
 
 # verify transaction
+```
 $ bitcoin-cli -regtest listunspent
 [
 ]
+```
 
 # display balance
+```
 $ bitcoin-cli -regtest getbalance
 49.99996260
+```
 
 # verify transaction before mining
+```
 $ bitcoin-cli -regtest listunspent 0
 [
   {
@@ -115,17 +127,22 @@ $ bitcoin-cli -regtest listunspent 0
     "safe": true
   }
 ]
+```
 
 # display balance
+```
 $ bitcoin-cli -regtest getbalance
+```
 
 # mining
+```
 $ bitcoin-cli -regtest generate 1
 [
   "6132ae51e35d9dbbf277e260609a074c2292a7b36fae1dce2d783cc1cd5aa55d"
 ]
-
+```
 # verify transaction
+```
 $ bitcoin-cli -regtest listunspent
 [
   {
@@ -165,11 +182,14 @@ $ bitcoin-cli -regtest listunspent
     "safe": true
   }
 ]
-
+```
 # display balance of user
+```
 $ bitcoin-cli -regtest getbalance 
 99.99996260
-
+```
 # verify block count 
+```
 $ bitcoin-cli -regtest getblockcount
 102
+```
